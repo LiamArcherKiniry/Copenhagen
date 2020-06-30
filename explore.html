@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+	
+	<title>Explore Copenhagen</title>
+	
+	<link rel='stylesheet' type='text/css' href='css/style.css' />
+  	
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ1oAJYfgrsNZkDZD27v--eYNijbXPwkA&callback=initMap"
+type="text/javascript"></script>
+    
+ <script type='text/javascript' src='./data/restaurant-data.js'></script>
+    <script type='text/javascript' src='main.js'></script>
+  
+  <script type='text/javascript'>
+     
+      
+      $(document).ready(function() {
+            setTimeout(function() {
+                $("#main").removeClass("is-loading");
+            }, 100)
+        });
+      
+  </script>
+
+</head>
+
+<body>
+    <div class="button_container" id="toggle"><span class="top"></span><span class="middle"></span><span class="bottom"></span></div>
+    <div class="overlay" id="overlay">
+      <nav class="overlay-menu">
+          <div class="grid">
+              <div class="column-xs-9">
+                          <ul>
+                          <li><a href="index.html">HOME</a></li>
+                          <li><a href="explore.html">EXPLORE</a></li>
+                          <li><a href="eat.html">EAT</a></li>
+                          <li><a href="excursions.html">EXCURSIONS</a></li>
+                        </ul>
+              </div>
+              <div class="column-xs-3">
+                          <ul id="mapnav">
+                          <li><a href="map.html">MAP</a></li>
+                    
+                        </ul>
+              </div>
+          </div>
+      </nav>
+    </div>
+
+            <div id="main" class="is-loading">
+                <h1 id="title">
+                    Explore
+                    </h1>
+                <div id="ex-holder">
+                    <div class="svg-max">
+                    <div class="svg-padded-box">
+                    
+                    <img id="explorehead" src="images/explore.svg" alt="an illustration of Copenhagen's Landmarks">
+                    </div>
+                        
+                    </div>
+                    
+                </div>
+                <div><i class="ion-chevron-down"></i></div>
+    </div>
+
+             
+<div class="container">
+     <h2 class="section-header">Where to Go</h2>
+    <div class="grid">
+          <div class="column-xs-12">
+            <ul class="slider">
+              <li class="slider-item active">
+                <div class="grid">
+                  <div class="descrip column-xs-12 column-md-6">
+
+                            <h2 class="title"><span class="underline">Tivoli Gardens</span></h2>
+
+                        <p class="description">Tivoli Gardens is the second-oldest operating amusement park in the world. It offers a variety of rides and beautiful scenery right in the center of copenhagen.</p>
+                       <a class="infobutton" href="https://tivoli.dk">Info</a>
+                  </div>
+                  <div class="column-xs-12 column-md-6">
+                    <figure class="image-holder">
+                      <img src="images/tivoli.jpg" alt="image of tivoli gardens lake">
+                        <figcaption>credit: tivoli.dk</figcaption>
+                    </figure>
+                  </div>
+                </div>
+                  <hr>
+              </li>
+                
+                <li class="slider-item active">
+                <div class="grid">
+                  <div class="descrip column-xs-12 column-md-6">
+
+                            <h2 class="title"><span class="underline">Design Museum Danmark</span></h2>
+
+                        <p class="description">Designmuseum Danmark showcases the history of design in Denmark and across the world. The museum offers a collection Danish and international design and the outdoor museum garden and cafe. The perfect place to let your inner designer out.  </p>
+                        <a class="infobutton" href="https://designmuseum.dk">Info</a>
+                  </div>
+                  <div class="column-xs-12 column-md-6">
+                    <figure class="image-holder">
+                      <img src="images/designmuseum.jpg" alt="image of the interior of the museum">
+                        <figcaption>credit: designmuseum.dk</figcaption>
+                    </figure>
+                  </div>
+                </div>
+                    <hr>
+              </li>
+                
+                <li class="slider-item active">
+                <div class="grid">
+                  <div class="descrip column-xs-12 column-md-6">
+
+                            <h2 class="title"><span class="underline">Christiania</span></h2>
+
+                        <p class="description">Freetown Christiania is an intentional community and commune. It's a must visit site when you come to Copenhagen. A great place to wander and soak up the atmosphere, eat some food, buy some crafts, and see some public art. The laws are different here so make sure you abide by the community rules and careful whose photo you take. </p>
+                       <a class="infobutton" href="https://christiania.org">Info</a>
+                  </div>
+                  <div class="column-xs-12 column-md-6">
+                    <figure class="image-holder">
+                      <img src="images/christiania.jpg" alt="image of the entrance to Christiania">
+                        <figcaption>credit: christiania.org</figcaption>
+                    </figure>
+                  </div>
+                </div>
+                    <hr>
+              </li>
+            
+                <li class="slider-item active">
+                <div class="grid">
+                  <div class="descrip column-xs-12 column-md-6">
+
+                            <h2 class="title"><span class="underline">The Royal Danish Theatre</span></h2>
+
+                        <p class="description">The Royal Danish Theater is home to the Royal Danish Opera, Ballet and Orchestra. Officially the Royal Danish Theatre consists of six stages, all of which are lovely. For a truly amazing night out you should try and see a show at the Gamle Scene. This ornate 19th century theatre is a stunning show in and of itself with ornate decoration, impressive architecture, and a balcony view of the city. Queen Margrethe II is known to frequent it as well. </p>
+                       <a class="infobutton" href="https://kglteater.dk/">Info</a>
+                  </div>
+                  <div class="column-xs-12 column-md-6">
+                    <figure class="image-holder">
+                      <img src="images/gamle-scene.jpg">
+                        <figcaption>credit: https://kglteater.dk/</figcaption>
+                    </figure>
+                  </div>
+                </div>
+                    <hr>
+              </li>
+                
+                <li class="slider-item active">
+                <div class="grid">
+                  <div class="descrip column-xs-12 column-md-6">
+
+                            <h2 class="title"><span class="underline">Rosenborg Castle</span></h2>
+
+                        <p class="description">Rosenborg Castle is a Danish Renaissance palace and gardens. It houses a museum where you can find the crown jewels. Perfect if you want to see some Impressive history.</p>
+                      <a class="infobutton" href="http://www.kongernessamling.dk/"> Info</a>
+                  </div>
+                  <div class="column-xs-12 column-md-6">
+                    <figure class="image-holder">
+                      <img src="images/rosenborg-castle.jpg" alt="image of rosenborg castel">
+                        <figcaption>credit: http://www.kongernessamling.dk/</figcaption>
+                    </figure>
+                  </div>
+                </div>
+                    <hr>
+              </li>
+                
+                <li class="slider-item active">
+                <div class="grid">
+                  <div class="descrip column-xs-12 column-md-6">
+
+                            <h2 class="title"><span class="underline">Nyhavn</span></h2>
+
+                        <p class="description">Nyhavn is one of Copenhagen's most iconic locals. Nyhavn is waterfront, canal and entertainment district lined by brightly colored 17th and 18th-century townhouses. It's become one of the vistas by which Copenhagen is identified. Almost every building along the canal is a restaurant. It's the perfect place to grab a bite and bask in the beauty of the scenery before walking over to the The Royal Danish Theatre's Old Stage for a show. </p>
+                      <a class="infobutton" href="https://www.visitcopenhagen.com/copenhagen/planning/nyhavn-gdk474735">Info</a>
+                  </div>
+                  <div class="column-xs-12 column-md-6">
+                    <figure class="image-holder">
+                      <img src="images/nyhavn.jpg" alt="image of nyhavn">
+                        <figcaption>credit: Jorge Franganillo | Flickr</figcaption>
+                    </figure>
+                  </div>
+                </div>
+                    <hr>
+              </li>
+             <li class="slider-item active">
+                <div class="grid">
+                  <div class="descrip column-xs-12 column-md-6">
+
+                            <h2 class="title"><span class="underline">More</span></h2>
+
+                        <p class="description">Copenhagen has so much to offer it couldn't be summed up in one website. The best thing to do is look for the things that you like. Renting a bike to get to whatever that might be is a quick, fun, and very Danish Way to get around. </p>
+                     
+                  </div>
+                  <div class="column-xs-12 column-md-6">
+                    <figure class="image-holder">
+                      <img src="images/skyline.jpeg" alt="image of copenhagen's rooftops from an aerial perspective">
+                        <figcaption>credit: http://www.kongernessamling.dk/</figcaption>
+                    </figure>
+                  </div>
+                </div>
+                 <hr>
+              </li>
+            
+
+            </ul>
+              
+         
+        </div>
+      </div>
+</div>
+
+<footer class="container">
+    <h3>Vi Ses (See You Soon)</h3>
+  <div class="grid">
+        <div class="column-xs-6 column-md-6">
+            <ul class="">
+                <li><a href="eat.html" >Eat</a></li>
+                <li><a href="explore.html" >Explore</a></li>
+                <li><a href="excursions.html" >Excursions</a></li>
+            </ul>
+        </div>
+        <div class="column-xs-6 column-md-6">
+            <ul class="">
+                <li><a href="map.html" >Map</a></li>
+                
+           
+            </ul>
+            <a class="ref" href="references.html" >references</a>
+            <p>&copy; Liam Kiniry</p>
+        </div>
+        <div class="bottom-foot column-xs-6 column-md-6">
+           <div class="copenlogo"></div>
+        </div>
+  </div> 
+</footer>
+
+
+	
+<script>
+$('#toggle').click(function() {
+       $(this).toggleClass('active');
+       $('#overlay').toggleClass('open');
+      });  
+
+      
+</script>
+</body>
+
+</html>

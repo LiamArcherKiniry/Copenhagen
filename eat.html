@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+	
+	<title>Eat Copenhagen</title>
+	
+	<link rel='stylesheet' type='text/css' href='css/style.css' />
+  	
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+
+    <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ1oAJYfgrsNZkDZD27v--eYNijbXPwkA&callback=initMap"
+type="text/javascript"></script>
+    
+ <script type='text/javascript' src='./data/restaurant-data.js'></script>
+    <script async defer type='text/javascript' src='main.js'></script>
+  
+  <script type='text/javascript'>
+     
+      
+      $(document).ready(function() {
+            setTimeout(function() {
+                $("#main").removeClass("is-loading");
+            }, 100)
+        });
+      
+  </script>
+
+</head>
+
+<body>
+    <div class="button_container" id="toggle"><span class="top"></span><span class="middle"></span><span class="bottom"></span></div>
+    <div class="overlay" id="overlay">
+      <nav class="overlay-menu">
+          <div class="grid">
+              <div class="column-xs-9">
+                          <ul>
+                          <li><a href="index.html">HOME</a></li>
+                          <li><a href="explore.html">EXPLORE</a></li>
+                          <li><a href="eat.html">EAT</a></li>
+                          <li><a href="excursions.html">EXCURSIONS</a></li>
+                        </ul>
+              </div>
+              <div class="column-xs-3">
+                          <ul id="mapnav">
+                          <li><a href="map.html">MAP</a></li>
+                    
+                        </ul>
+              </div>
+          </div>
+      </nav>
+    </div>
+
+            <div id="main" class="is-loading">
+                <h1 id="title">
+                    EAT
+                    </h1>
+                <div>
+                    <div class="svg-max">
+                    <div class="svg-padded-box">
+                    
+                    <img id="eathead" src="images/eatheader.svg" alt="an illustration of classic danish food">
+                    </div>
+                        
+                    </div>
+                    
+                </div>
+                <div><i class="ion-chevron-down"></i></div>
+    </div>
+
+             
+<div class="container">
+    <h2 class="section-header">Where to Eat</h2>
+    <div class="grid">
+        <div id="selection" class="column-xs-12 column-md-12 column-lg-2">
+             <ul id="locations">
+
+                <li data-geo-lat="55.6796409" data-geo-long="12.5839917">
+                  <h3>Llama</h3>
+                  <div class="longdesc">
+                      <figure class="image-holder">
+                          <img src="images/llama.jpg" alt="a photo of delicious tapas style food and the colorful interior of Llama">
+                          <figcaption>credit: cofoco.dk/en/restaurants/llama</figcaption>
+                      </figure>
+                      <p><strong>About:</strong> A member of the Copenhagen Food Collective, Llama is one Copenhagen's best and only Latin-American restaurants. Llama has a great menu and a great bar and it's dark but colorful atmosphere makes it a great place for a fun night out or a romantic dinner. Check it out if you're looking to spice up your Copenhagen experience. </p>
+                       <a class="infobutton" href="https://cofoco.dk/en/restaurants/llama/">Info</a>
+    
+                    </div>
+                </li>
+
+                <li data-geo-lat="55.6692255" data-geo-long="12.5587692">
+                  <h3>Bio Mio</h3>
+                  <div class="longdesc">
+                      <figure class="image-holder">
+                          <img src="images/BioMio.jpg" alt="a photo of showing Bio Mio's neon sign and outdoor seating">
+                          <figcaption>credit: bobbistro.dk</figcaption>
+                      </figure>
+                      <p><strong>About:</strong> BOB BISTRO (BioMio) is a sustainable and organic bistro in Vesterbro's meatpacking district. The perfect place for a conscious meat eater and a vegetarian, they have options for all. They've got great indoor and outdoor seating with great service. A great spot to hit up before a night on the town in one of Copenhagen's popular clubbing districts.</p>
+                        <a class="infobutton" href="http://bobbistro.dk/">Info</a>
+                    </div>
+                </li>
+
+                <li data-geo-lat="55.6727069" data-geo-long="12.5531287">
+                  <h3>Madklubben Vesterbro</h3>
+                  <div class="longdesc">
+                      <figure class="image-holder">
+                          <img src="images/madklubben.jpg" alt="a photo of Madklubben's bistro style food on a rustic table">
+                          <figcaption>credit: madklubben.dk</figcaption>
+                      </figure>
+                      <p><strong>About:</strong> Madklubben's Vesterbro branch is one of the most popular restaurants in Copenhagen but with good reason. This restaurant offers options for everyone vegetarian and vegan (which can be hard to find in Copenhagen if your don't ask) at a great price. With a bustling and vibrant interior this restaurant is a great stop for any copenhagen visitor.</p>
+                     <a class="infobutton" href="https://madklubben.dk/restaurant-madklubben-vesterbro/">Info</a>
+                    
+                    </div>
+                    
+                </li>
+                 
+                  <li data-geo-lat="55.6691696" data-geo-long="12.5586246">
+                  <h3>Paté Paté</h3>
+                  <div class="longdesc">
+                      <figure class="image-holder">
+                          <img src="images/patePate.jpg" alt="a photo of the interior of Paté Paté showing seating and the open kitchen">
+                          <figcaption>credit: patepate.dk</figcaption>
+                      </figure>
+                      <p><strong>About:</strong> A Vesterbro meatpacking favorite, Paté Paté offers French, Spanish and Moroccan food in hip and urban environment. They also offer a wine bar and tapas that can suit those looking for lighter fare and a good time. This restaurants relaxed vibe and great food makes it a great stop any day.</p>
+                       <a class="infobutton" href="https://www.patepate.dk/">Info</a>
+                      </div>
+                </li>
+
+                <li data-geo-lat="55.6730335" data-geo-long="12.5599346">
+                  <h3>Høst</h3>
+                  <div class="longdesc">
+                      <figure class="image-holder">
+                          <img src="images/host.jpg" alt="a photo showing several dishes including clams, moss, and peppers">
+                          <figcaption>credit: cofoco.dk/en/restaurants/hoest </figcaption>
+                      </figure>
+                      <p><strong>About:</strong> Høst, a Copenhagen Food Collective member, is a New-Nordic restaurant renown for its design and its food. They offer fresh takes on New-Nordic Cuisine at an affordable price point. This cozy restaurant located in city center, near Copenhagen University, is a great place to try some unique cuisine while exploring the city.</p>
+                       <a class="infobutton" href="https://cofoco.dk/en/restaurants/hoest/">Info</a>
+                    </div>
+                </li>
+                 <li data-geo-lat="55.6836899" data-geo-long="12.5697655">
+                  <h3>Torvehallerne</h3>
+                  <div class="longdesc">
+                      <figure class="image-holder">
+                          <img src="images/torvehallerne.jpg" alt="a photo showing the covered market at Torvehallerne">
+                          <figcaption>credit: torvehallernekbh.dk</figcaption>
+                      </figure>
+                      <p><strong>About:</strong> Torvehallerne is covered marketplace featuring stalls with local produce, gourmet foods, beverages and desserts. Located in city-center near the Nørreport St. Metro stop, this is the perfect place to catch lunch while touring the city. It has a variety of selection and offers a place to stock up on whatever you might need during the day while exploring Copenhagen's culinary diversity.</p>
+                      <a class="infobutton" href="http://torvehallernekbh.dk/">Info</a>
+                     </div>
+                </li>
+                 <li data-geo-lat="55.6937104" data-geo-long="12.6093596">
+                  <h3>Reffen</h3>
+                  <div class="longdesc">
+                      <figure class="image-holder">
+                          <img src="images/reffen_drone.jpg" alt="an aerial photo showing the market, skatepark, and harbour view at Reffen">
+                          <figcaption>credit: reffen.dk</figcaption>
+                      </figure>
+                      <p><strong>About:</strong> Reffen is Copenhagen's dynamic street-food and artisan craftworks incubator. This compound is one of the highlights of Refshaleøen, a former industrial sector in the city's northeastern docklands that has become the place to be for creative startups. Here you can checkout food and products from over 50 chefs and creative artisans while you take in one of the best views of the harbor. Reffen is the perfect pace to immerse yourself in the life of a københavnerne (Copenhagener). </p> 
+                       <a class="infobutton" href="https://reffen.dk/en/">Info</a>
+                     </div>
+                </li>
+                 <li data-geo-lat="55.6828259" data-geo-long="12.6104808">
+                  <h3>Noma</h3>
+                  <div class="longdesc">
+                      <figure class="image-holder">
+                          <img src="images/noma.jpg" alt="a photo showng Noma's rustic interior and a dish of vegetables">
+                          <figcaption>credit: noma.dk</figcaption>
+                      </figure>
+                      <p><strong>About:</strong> Denmark's most famous (and probably most expensive) restaurant, Noma is the premier establishment of Chef Rene Redzepi, the pioneer of New Nordic cuisine. This Michelin star eatery offers 20-course meals showcasing the best that New Nordic cuisine has to offer reviving and pioneering techniques and flavors that are uniquely scandinavian. </p>
+                      <a class="infobutton" href="https://noma.dk/">Info</a>
+                     </div>
+                </li>
+
+
+             </ul>
+        </div>
+        <div class="column-xs-12 column-md-12 column-lg-10">
+            <div class="grid">
+                <div class="column-xs-12 column-md-8">
+                    <div id="more-info">
+                        <h2>More Info</h2>
+                        <div>
+
+
+                        </div>
+                    </div>
+            </div>
+            <div class="column-xs-12 column-md-4">
+              
+                <div id="map_canvas"></div>
+            </div>
+            </div>
+            
+        </div>
+    </div>
+    
+</div> 
+
+<footer class="container">
+    <h3>Vi Ses (See You Soon)</h3>
+  <div class="grid">
+        <div class="column-xs-6 column-md-6">
+            <ul class="">
+                <li><a href="eat.html" >Eat</a></li>
+                <li><a href="explore.html" >Explore</a></li>
+                <li><a href="excursions.html" >Excursions</a></li>
+            </ul>
+        </div>
+        <div class="column-xs-6 column-md-6">
+            <ul class="">
+                <li><a href="map.html" >Map</a></li>
+                
+           
+            </ul>
+            <a class="ref" href="references.html" >references</a>
+            <p>&copy; Liam Kiniry</p>
+        </div>
+        <div class="bottom-foot column-xs-6 column-md-6">
+           <div class="copenlogo"></div>
+        </div>
+  </div> 
+</footer>
+
+
+	
+<script>
+$('#toggle').click(function() {
+       $(this).toggleClass('active');
+       $('#overlay').toggleClass('open');
+      });  
+
+
+
+</script>
+    </body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+	
+	<title>Excursions from Copenhagen</title>
+	
+	<link rel='stylesheet' type='text/css' href='css/style.css' />
+  	
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+ <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ1oAJYfgrsNZkDZD27v--eYNijbXPwkA&callback=initMap"
+type="text/javascript"></script>
+    
+ <script type='text/javascript' src='./data/restaurant-data.js'></script>
+    <script type='text/javascript' src='main.js'></script>
+  
+  <script type='text/javascript'>
+      
+      $(document).ready(function() {
+            setTimeout(function() {
+                $("#main").removeClass("is-loading");
+            }, 100)
+        });
+      
+  </script>
+
+</head>
+
+<body>
+    <div class="button_container" id="toggle"><span class="top"></span><span class="middle"></span><span class="bottom"></span></div>
+    <div class="overlay" id="overlay">
+      <nav class="overlay-menu">
+          <div class="grid">
+              <div class="column-xs-9">
+                          <ul>
+                          <li><a href="index.html">HOME</a></li>
+                          <li><a href="explore.html">EXPLORE</a></li>
+                          <li><a href="eat.html">EAT</a></li>
+                          <li><a href="excursions.html">EXCURSIONS</a></li>
+                        </ul>
+              </div>
+              <div class="column-xs-3">
+                          <ul id="mapnav">
+                          <li><a href="map.html">MAP</a></li>
+                    
+                        </ul>
+              </div>
+          </div>
+      </nav>
+    </div>
+
+            <div id="main" class="is-loading">
+                <h1 id="title">
+                    EXCURSIONS
+                    </h1>
+                <div id="ex-holder">
+                    <div class="svg-max">
+                    <div class="svg-padded-box">
+                    
+                    <img id="explorehead" src="images/excursions.svg" alt="an illustration of shoes, bikes, trains, tickets, and a backpack">
+                    </div>
+                        
+                    </div>
+                    
+                </div>
+                <div><i class="ion-chevron-down"></i></div>
+    </div>
+
+             
+<div class="container">
+    <h2 class="section-header">Where to Day-Trip</h2>
+    <div class="grid">
+        <div class="column-xs-12 column-md-4">
+            <div class="excursion">
+            
+             <figure class="image-holder">
+                          <img src="images/louisiana.jpg" alt="a photo showng the sea view of the Louisiana's sculpture garden.">
+                          <figcaption>credit: louisiana.dk</figcaption>
+            </figure>
+            <h3>Louisiana Museum of Modern art</h3>
+            <p><strong>Time to Travel:</strong> 45 minutes</p>
+            <p><strong>Adult Ticket:</strong> 130 DKK ~ $20</p>
+            <p><strong>About:</strong><br>Just a 45-minute train ride north of Copenhagen, The Louisiana Museum of Modern Art is one of Denmark's premier modern art institutions. Here you can take in the beautiful confluence of art, architecture, and landscape in this seaside estate. With works from hundreds of world renowned artists, a brilliant cafe, and expansive sculpture garden, the Louisiana Museum is a perfect day trip. </p>
+             <a class="infobutton" href="https://www.louisiana.dk/">Info</a>
+            </div>
+            
+        </div>
+        <div class="column-xs-12 column-md-4">
+            <div class="excursion">
+            
+             <figure class="image-holder">
+                          <img src="images/kronborg.jpg" alt="a photo showng a view the Kronborg Castle walls from the sea with the towers peaking over the top of the walls.">
+                          <figcaption>credit: kongeligeslotte.dk</figcaption>
+            </figure>
+            <h3>Kronborg Castle</h3>
+            <p><strong>Time to Travel:</strong>1 hour</p>
+            <p><strong>Adult Ticket:</strong>95 DKK ~ $14</p>
+            <p><strong>About:</strong><br>Kronborg Castle, a UNESCO World Heritage Site, is said to be the setting of Shakespeare’s Hamlet. It is one of the must-see attractions in Denmark. Kronborg was built between 1574 and 1585 by Frederick II with ornate decoration and imposing architecture in Dutch Renaissance style. The castle is stunning and the surrounding town is a beautiful seaside town with shops as well as a sizeable performance venu.</p>
+             <a class="infobutton" href="https://kongeligeslotte.dk/en/palaces-and-gardens/kronborg-castle.html">Info</a>
+            </div>
+            
+        </div>
+
+        <div class="column-xs-12 column-md-4">
+            <div class="excursion">
+            
+             <figure class="image-holder">
+                          <img src="images/malmo.jpg" alt="a photo showng an aerial view of the city of Malmo and it's coastline.">
+                          <figcaption>credit: visitsweden.com/malmo</figcaption>
+            </figure>
+            <h3>Malmö, Sweden</h3>
+            <p><strong>Time to Travel:</strong>40 minutes</p>
+            <p><strong>Adult Ticket:</strong>N/A</p>
+            <p><strong>About:</strong><br>Malmö is Sweden's third largest city. Here you can explore the picturesque old town, relax in the city's many parks, and admire it's blend of architectural styles. Don't be afraid to cross the border into Sweden, just make sure you've got your passport. It's only a 40 minute journey to this lovely city across the Øresund straight.</p>
+             <a class="infobutton" href="https://visitsweden.com/malmo/">Info</a>
+            </div>
+            
+        </div>
+    </div>   
+
+    
+</div>
+
+<footer class="container">
+    <h3>Vi Ses (See You Soon)</h3>
+  <div class="grid">
+        <div class="column-xs-6 column-md-6">
+            <ul class="">
+                <li><a href="eat.html" >Eat</a></li>
+                <li><a href="explore.html" >Explore</a></li>
+                <li><a href="excursions.html" >Excursions</a></li>
+            </ul>
+        </div>
+        <div class="column-xs-6 column-md-6">
+            <ul class="">
+                <li><a href="map.html" >Map</a></li>
+                
+           
+            </ul>
+            <a class="ref" href="references.html" >references</a>
+            <p>&copy; Liam Kiniry</p>
+        </div>
+        <div class="bottom-foot column-xs-6 column-md-6">
+           <div class="copenlogo"></div>
+        </div>
+  </div> 
+</footer>
+
+
+	
+<script>
+$('#toggle').click(function() {
+       $(this).toggleClass('active');
+       $('#overlay').toggleClass('open');
+      });  
+ 
+
+      
+</script>
+</body>
+
+</html>

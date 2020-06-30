@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+	
+	<title>Visit Copenhagen</title>
+	
+	<link rel='stylesheet' type='text/css' href='css/style.css' />
+  	
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ1oAJYfgrsNZkDZD27v--eYNijbXPwkA&callback=initMap"
+type="text/javascript"></script>
+    
+ <script type='text/javascript' src='./data/restaurant-data.js'></script>
+    <script type='text/javascript' src='main.js'></script>
+  
+  <script type='text/javascript'>
+     
+  </script>
+
+</head>
+
+<body>
+    <div class="button_container" id="toggle"><span class="top"></span><span class="middle"></span><span class="bottom"></span></div>
+    <div class="overlay" id="overlay">
+      <nav class="overlay-menu">
+          <div class="grid">
+              <div class="column-xs-9">
+                          <ul>
+                          <li><a href="index.html">HOME</a></li>
+                          <li><a href="explore.html">EXPLORE</a></li>
+                          <li><a href="eat.html">EAT</a></li>
+                          <li><a href="excursions.html">EXCURSIONS</a></li>
+                        </ul>
+              </div>
+              <div class="column-xs-3">
+                          <ul id="mapnav">
+                          <li><a href="map.html">MAP</a></li>
+                    
+                        </ul>
+              </div>
+          </div>
+      </nav>
+    </div>
+
+
+<div class="container">
+    <h2 class="section-header">References</h2>
+    <div class="grid">
+        <div id="selection" class="column-xs-12 column-md-12 column-lg-12" >
+             
+<div class="ritz grid-container"  dir="ltr">
+	<table  class="waffle" cellspacing="0" cellpadding="0" >
+		<tbody>
+			<tr >
+				<th id="1974407675R0"  class="row-headers-background">
+					<div class="row-header-wrapper" >1</div>
+				</th>
+				<td class="s0" dir="ltr">link</td>
+				<td class="s0" dir="ltr">src up dates</td>
+				<td class="s1" dir="ltr">purpose</td>
+				<td class="s1" dir="ltr">image</td>
+			</tr>
+			<tr >
+				<th id="1974407675R1"  class="row-headers-background">
+					<div class="row-header-wrapper" >2</div>
+				</th>
+				<td class="s2" dir="ltr">
+					<a target="_blank" href="https://cofoco.dk/en/restaurants/llama/">https://cofoco.dk/en/restaurants/llama/</a>
+				</td>
+				<td class="s3" dir="ltr">3/25/2020</td>
+				<td class="s0" dir="ltr">used image on home and eat pages</td>
+				<td class="s1" dir="ltr"><img style="height: 5em;" src="images/llama.jpg" alt="llama photo"></td>
+			</tr>
+			<tr >
+				<th id="1974407675R2"  class="row-headers-background">
+					<div class="row-header-wrapper" >3</div>
+				</th>
+				<td class="s2" dir="ltr">
+					<a target="_blank" href="http://bobbistro.dk/">http://bobbistro.dk/</a>
+				</td>
+				<td class="s3" dir="ltr">3/25/2020</td>
+				<td class="s0" dir="ltr">used image on home and eat pages</td>
+				<td class="s1" dir="ltr"><img style="height: 5em;" src="images/BioMio.jpg" alt="bio mio photo"></td>
+			</tr>
+			<tr >
+				<th id="1974407675R3"  class="row-headers-background">
+					<div class="row-header-wrapper" >4</div>
+				</th>
+				<td class="s2" dir="ltr">
+					<a target="_blank" href="https://madklubben.dk/restaurant-madklubben-vesterbro/">https://madklubben.dk/restaurant-madklubben-vesterbro/</a>
+				</td>
+				<td class="s3" dir="ltr">3/25/2020</td>
+				<td class="s0" dir="ltr">used image on home and eat pages</td>
+				<td class="s1" dir="ltr"><img style="height: 5em;" src="images/madklubben.jpg" alt="madklubben photo"></td>
+			</tr>
+			<tr >
+				<th id="1974407675R4"  class="row-headers-background">
+					<div class="row-header-wrapper" >5</div>
+				</th>
+				<td class="s2" dir="ltr">
+					<a target="_blank" href="https://www.patepate.dk/">https://www.patepate.dk/</a>
+				</td>
+				<td class="s3" dir="ltr">3/25/2020</td>
+				<td class="s0" dir="ltr">used image on home and eat pages</td>
+				<td class="s1" dir="ltr"><img style="height: 5em;" src="images/patePate.jpg" alt="pate pate photo"></td>
+			</tr>
+			<tr >
+				<th id="1974407675R5"  class="row-headers-background">
+					<div class="row-header-wrapper" >6</div>
+				</th>
+				<td class="s2" dir="ltr">
+					<a target="_blank" href="https://cofoco.dk/en/restaurants/hoest/">https://cofoco.dk/en/restaurants/hoest/</a>
+				</td>
+				<td class="s3" dir="ltr">3/25/2020</td>
+				<td class="s0" dir="ltr">used image on home and eat pages</td>
+				<td class="s1" dir="ltr"><img style="height: 5em;" src="images/host.jpg" alt="host photo"></td>
+			</tr>
+			<tr >
+				<th id="1974407675R6"  class="row-headers-background">
+					<div class="row-header-wrapper" >7</div>
+				</th>
+				<td class="s2" dir="ltr">
+					<a target="_blank" href="http://torvehallernekbh.dk/">http://torvehallernekbh.dk/</a>
+				</td>
+				<td class="s3" dir="ltr">3/25/2020</td>
+				<td class="s0" dir="ltr">used image on home and eat pages</td>
+				<td class="s1" dir="ltr"><img style="height: 5em;" src="images/torvehallerne.jpg" alt="torvehallerne photo"></td>
+			</tr>
+			<tr >
+				<th id="1974407675R7"  class="row-headers-background">
+					<div class="row-header-wrapper" >8</div>
+				</th>
+				<td class="s2" dir="ltr">
+					<a target="_blank" href="https://reffen.dk/en/">https://reffen.dk/en/</a>
+				</td>
+				<td class="s3" dir="ltr">3/25/2020</td>
+				<td class="s0" dir="ltr">used image on home and eat pages</td>
+				<td class="s1" dir="ltr"><img style="height: 5em;" src="images/reffen_drone.jpg" alt="reffen photo"></td>
+			</tr>
+			<tr >
+				<th id="1974407675R8"  class="row-headers-background">
+					<div class="row-header-wrapper" >9</div>
+				</th>
+				<td class="s2" dir="ltr">
+					<a target="_blank" href="https://noma.dk/">https://noma.dk/</a>
+				</td>
+				<td class="s3" dir="ltr">3/25/2020</td>
+				<td class="s0" dir="ltr">used image on home and eat pages</td>
+				<td class="s1" dir="ltr"><img style="height: 5em;" src="images/noma.jpg" alt="noma photo"></td>
+			</tr>
+			<tr >
+				<th id="1974407675R9"  class="row-headers-background">
+					<div class="row-header-wrapper" >10</div>
+				</th>
+				<td class="s2" dir="ltr">
+					<a target="_blank" href="https://www.louisiana.dk/">https://www.louisiana.dk/</a>
+				</td>
+				<td class="s3" dir="ltr">3/25/2020</td>
+				<td class="s0" dir="ltr">used image on home and excursions pages</td>
+				<td class="s1" dir="ltr"><img style="height: 5em;" src="images/louisiana.jpg" alt="louisiana photo"></td>
+			</tr>
+			<tr >
+				<th id="1974407675R10"  class="row-headers-background">
+					<div class="row-header-wrapper" >11</div>
+				</th>
+				<td class="s2" dir="ltr">
+					<a target="_blank" href="https://kongeligeslotte.dk/en/palaces-and-gardens/kronborg-castle.html">https://kongeligeslotte.dk/en/palaces-and-gardens/kronborg-castle.html</a>
+				</td>
+				<td class="s3" dir="ltr">3/25/2020</td>
+				<td class="s0" dir="ltr">used image on home and excursions pages</td>
+				<td class="s1" dir="ltr"><img style="height: 5em;" src="images/kronborg.jpg" alt="kronborg photo"></td>
+			</tr>
+			<tr >
+				<th id="1974407675R11"  class="row-headers-background">
+					<div class="row-header-wrapper" >12</div>
+				</th>
+				<td class="s2" dir="ltr">
+					<a target="_blank" href="https://visitsweden.com/malmo/">https://visitsweden.com/malmo/</a>
+				</td>
+				<td class="s3" dir="ltr">3/25/2020</td>
+				<td class="s0" dir="ltr">used image on home and excursions pages</td>
+				<td class="s1" dir="ltr"><img style="height: 5em;" src="images/malmo.jpg" alt="malmo photo"></td>
+			</tr>
+			<tr >
+				<th id="1974407675R12"  class="row-headers-background">
+					<div class="row-header-wrapper" >13</div>
+				</th>
+				<td class="s2" dir="ltr">
+					<a target="_blank" href="http://tivoli.dk">tivoli.dk</a>
+				</td>
+				<td class="s4" dir="ltr">3/25/2020</td>
+				<td class="s0" dir="ltr">used image on home and explore pages</td>
+				<td class="s1" dir="ltr"><img style="height: 5em;" src="images/tivoli.jpg" alt="tivoli photo"></td>
+			</tr>
+			<tr >
+				<th id="1974407675R13"  class="row-headers-background">
+					<div class="row-header-wrapper" >14</div>
+				</th>
+				<td class="s2" dir="ltr">
+					<a target="_blank" href="http://designmuseum.dk">designmuseum.dk</a>
+				</td>
+				<td class="s4" dir="ltr">3/25/2020</td>
+				<td class="s0" dir="ltr">used image on home and explore pages</td>
+				<td class="s1" dir="ltr"><img style="height: 5em;" src="images/designmuseum.jpg" alt="designmuseum photo"></td>
+			</tr>
+			<tr >
+				<th id="1974407675R14"  class="row-headers-background">
+					<div class="row-header-wrapper" >15</div>
+				</th>
+				<td class="s2" dir="ltr">
+					<a target="_blank" href="http://christiania.org">christiania.org</a>
+				</td>
+				<td class="s4" dir="ltr">3/25/2020</td>
+				<td class="s0" dir="ltr">used image on home and explore pages</td>
+				<td class="s1" dir="ltr"><img style="height: 5em;" src="images/christiania.jpg" alt="christiania photo"></td>
+			</tr>
+			<tr >
+				<th id="1974407675R15"  class="row-headers-background">
+					<div class="row-header-wrapper" >16</div>
+				</th>
+				<td class="s2" dir="ltr">
+					<a target="_blank" href="https://kglteater.dk/">https://kglteater.dk/</a>
+				</td>
+				<td class="s4" dir="ltr">3/25/2020</td>
+				<td class="s0" dir="ltr">used image on home and explore pages</td>
+				<td class="s1" dir="ltr"><img style="height: 5em;" src="images/gamle-scene.jpg" alt="gamle scene photo"></td>
+			</tr>
+			<tr >
+				<th id="1974407675R16"  class="row-headers-background">
+					<div class="row-header-wrapper" >17</div>
+				</th>
+				<td class="s2" dir="ltr">
+					<a target="_blank" href="http://www.kongernessamling.dk/">http://www.kongernessamling.dk/</a>
+				</td>
+				<td class="s4" dir="ltr">3/25/2020</td>
+				<td class="s0" dir="ltr">used image on home and explore pages</td>
+				<td class="s1" dir="ltr"><img style="height: 5em;" src="images/rosenborg-castle.jpg" alt="rosenborg caslte photo"></td>
+			</tr>
+			<tr >
+				<th id="1974407675R17"  class="row-headers-background">
+					<div class="row-header-wrapper" >18</div>
+				</th>
+				<td class="s2" dir="ltr">
+					<a target="_blank" href="https://www.flickr.com/photos/franganillo/28435382407">https://www.flickr.com/photos/franganillo/28435382407</a>
+				</td>
+				<td class="s4" dir="ltr">3/25/2020</td>
+				<td class="s0" dir="ltr">used image on home and explore pages</td>
+				<td class="s1" dir="ltr"><img style="height: 5em;" src="images/nyhavn.jpg" alt="nyhavn photo"></td>
+			</tr>
+			<tr >
+				<th id="1974407675R18"  class="row-headers-background">
+					<div class="row-header-wrapper" >19</div>
+				</th>
+				<td class="s2 " dir="ltr">
+					<div class="softmerge-inner" >
+						<a target="_blank" href="https://www.visitcopenhagen.com/">https://www.visitcopenhagen.com/</a>
+					</div>
+				</td>
+				<td class="s4" dir="ltr">3/25/2020</td>
+				<td class="s0" dir="ltr">used image on home and explore pages</td>
+				<td class="s1" dir="ltr"><img style="height: 5em;" src="images/skyline.jpeg" alt="nyhavn photo"></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+        </div>
+       
+    </div>
+    
+</div> 
+
+<footer class="container">
+    <h3>Vi Ses (See You Soon)</h3>
+  <div class="grid">
+        <div class="column-xs-6 column-md-6">
+            <ul class="">
+                <li><a href="eat.html" >Eat</a></li>
+                <li><a href="explore.html" >Explore</a></li>
+                <li><a href="excursions.html" >Excursions</a></li>
+            </ul>
+        </div>
+        <div class="column-xs-6 column-md-6">
+            <ul class="">
+                <li><a href="map.html" >Map</a></li>
+                
+           
+            </ul>
+            <a class="ref" href="references.html" >references</a>
+            <p>&copy; Liam Kiniry</p>
+        </div>
+        <div class="bottom-foot column-xs-6 column-md-6">
+           <div class="copenlogo"></div>
+        </div>
+  </div> 
+</footer>
+
+
+	
+<script>
+$('#toggle').click(function() {
+       $(this).toggleClass('active');
+       $('#overlay').toggleClass('open');
+      });  
+      /*illustration*/
+
+
+      
+</script>
+</body>
+
+</html>

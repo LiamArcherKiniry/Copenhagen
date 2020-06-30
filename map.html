@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+	<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+	
+	<title>Map Copenhagen</title>
+	
+	<link rel='stylesheet' type='text/css' href='css/style.css' />
+  	
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJ1oAJYfgrsNZkDZD27v--eYNijbXPwkA&callback=initMap"
+type="text/javascript"></script>
+    
+ <script type='text/javascript' src='./data/all-data.js'></script>
+  <script type='text/javascript' src='mappage.js'></script>
+  
+  <script type='text/javascript'>
+      
+      $(document).ready(function() {
+            setTimeout(function() {
+                $("#main").removeClass("is-loading");
+            }, 100)
+        });
+      
+  </script>
+
+</head>
+
+<body>
+    <div class="button_container" id="toggle"><span class="top"></span><span class="middle"></span><span class="bottom"></span></div>
+    <div class="overlay" id="overlay">
+      <nav class="overlay-menu">
+          <div class="grid">
+              <div class="column-xs-9">
+                          <ul>
+                          <li><a href="index.html">HOME</a></li>
+                          <li><a href="explore.html">EXPLORE</a></li>
+                          <li><a href="eat.html">EAT</a></li>
+                          <li><a href="excursions.html">EXCURSIONS</a></li>
+                        </ul>
+              </div>
+              <div class="column-xs-3">
+                          <ul id="mapnav">
+                          <li><a href="map.html">MAP</a></li>
+                    
+                        </ul>
+              </div>
+          </div>
+      </nav>
+    </div>
+
+            <div id="main" class="is-loading">
+                <h1 id="title">
+                    MAP
+                    </h1>
+                <div><i class="ion-chevron-down"></i></div>
+    </div>
+
+<div class="container">
+    <h2 class="section-header">WEATHER</h2>
+    <div class="grid">
+        <div class="column-xs-12 column-md-1">
+            <div class="buttons">
+                
+              <div id="temp" class = "jumbotron">
+                <h3></h3>
+              </div>
+              <div id="hum" class = "jumbotron">
+                <h3></h3>
+              </div>
+              <div id="wind" class = "jumbotron">
+                  <h3></h3>
+                </div>
+                <div id="sum" class = "jumbotron">
+                <h3></h3>
+              </div>
+                <a href="https://darksky.net/poweredby/">Powered by Dark Sky</a>
+                
+            
+        </div>
+        
+      
+    </div>
+    
+</div> 
+    </div>
+<div class="container">
+    <h2 class="section-header">MAP</h2>
+    <div class="grid">
+        <div class="column-xs-12 column-md-1">
+            <div id="buttons">
+                
+                <button id="restaurants" class="button-secondary" onclick="filterData('Restaurant')">Restaurants <span class="dot" ></span></button>
+                <button id="sights" class="button-secondary" onclick="filterData('place')">Sights <span class="dot" ></span></button>
+                 <button id="excursions" class="button-secondary" onclick="filterData('excursion')">Excursions <span class="dot" ></span></button>
+                <button id="filterAll" class="button-secondary" onclick="filterAll()">All </button>
+                
+                
+            </div>
+        </div>
+        <div id="all-map" class="column-xs-12 column-md-11">
+        
+        </div>
+      
+    </div>
+    
+</div> 
+
+<footer class="container">
+    <h3>Vi Ses (See You Soon)</h3>
+  <div class="grid">
+        <div class="column-xs-6 column-md-6">
+            <ul class="">
+                <li><a href="eat.html" >Eat</a></li>
+                <li><a href="explore.html" >Explore</a></li>
+                <li><a href="excursions.html" >Excursions</a></li>
+            </ul>
+        </div>
+        <div class="column-xs-6 column-md-6">
+            <ul class="">
+                <li><a href="map.html" >Map</a></li>
+                
+           
+            </ul>
+            <a class="ref" href="references.html" >references</a>
+            <p>&copy; Liam Kiniry</p>
+        </div>
+        <div class="bottom-foot column-xs-6 column-md-6">
+           <div class="copenlogo"></div>
+        </div>
+  </div> 
+</footer>
+
+
+	
+<script>
+
+/*
+show menu
+*/     
+    $('#toggle').click(function() {
+       $(this).toggleClass('active');
+       $('#overlay').toggleClass('open');
+      }); 
+ 
+
+var lat="";
+var cond="";
+var lon="";
+var temp="";
+var wind="";
+var hum="";
+var sum="";
+var url="https://api.darksky.net/forecast/fd482e555c6211b5ef039fc6f0fe142c/55.6761,12.5683";
+$(document).ready(function() {
+
+  function settemp1(tmp){
+    var tmp="Temp-"+tmp;
+    $("#temp").html(tmp);
+  }  
+  
+
+
+  function set(temp2,humidity2,wind2,sum2) {
+    var temp1="Temp: "+temp2;
+    var hum1="Humidity: "+humidity2;
+    var wind1="Wind: "+wind2;
+       var sum1="Summary: "+sum2;
+    $("#temp").html(temp1);
+    $("#hum").html(hum1);
+    $("#wind").html(wind1);
+    $("#sum").html(sum1);  
+  }
+  
+function getData(url) {
+/*  $.getJSON(url,function(json){
+  console.log(json.hourly.icon);
+ cond=json.hourly.icon;
+ temp=json.hourly.apparentTemperature;
+ hum=json.hourly.humidity;
+    wind=json.hourly.windSpeed;
+      sum=json.hourly.summary;
+
+    set(temp,hum,wind,sum1);
+  });*/
+    console.log(url);
+    
+      $.ajax({
+     url:url,
+     dataType: 'jsonp',
+     jsonp: 'callback',
+     success:function(json){
+ 
+       console.log(json.currently.icon);
+     cond=json.currently.icon;
+     temp=json.currently.temperature;
+         console.log(json.currently.temperature);
+     hum=json.currently.humidity;
+        wind=json.currently.windSpeed;
+          sum=json.currently.summary;
+         console.log(temp + hum + wind + sum);
+        set(temp,hum,wind,sum);
+     },
+     error:function(){
+         //ErrorHandling
+         },
+    });
+    
+
+}
+
+
+    url="https://api.darksky.net/forecast/fd482e555c6211b5ef039fc6f0fe142c/55.6761,12.5683";
+    
+    getData(url);
+
+});
+</script>
+    </body>
+
+</html>
